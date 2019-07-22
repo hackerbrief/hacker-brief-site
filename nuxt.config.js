@@ -1,3 +1,4 @@
+require('dotenv').config()
 import pkg from './package'
 
 export default {
@@ -13,6 +14,14 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  env: {
+    apiUrl: process.env.API_URL,
+    configUrl: process.env.CONFIG_ENDPOINT,
+    postsUrl: process.env.POSTS_ENDPOINT,
+    toolsUrl: process.env.TOOLS_ENDPOINT,
+    articleUrl: process.env.ARTICLE_ENDPOINT
+  },
+
   loading: { color: '#fff' },
 
   css: [],
@@ -21,7 +30,8 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv'
   ],
 
   build: {
