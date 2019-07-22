@@ -1,5 +1,5 @@
 <template>
-  <section id="home">
+  <section id="blog">
   </section>
 </template>
 
