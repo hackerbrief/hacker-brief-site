@@ -26,7 +26,10 @@ export default {
 
   css: [],
 
-  plugins: [],
+  plugins: [
+    '~/plugins/api.js',
+    '~/plugins/util.js'
+  ],
 
   modules: [
     '@nuxtjs/axios',
