@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Sidenav />
+    <Sidenav :open="open" @close="sidenav = false" />
     <div id="app-root">
-      <Nav />
+      <Nav :open="open" @sidenav="sidenav = !sidenav" />
       <nuxt />
       <Footer />
     </div>
@@ -19,10 +19,17 @@ export default {
     Footer,
     Nav,
     Sidenav
+  },
+  data() {
+    return {
+      open: false
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#app-root {}
+#app-root {
+  position: relative;
+}
 </style>

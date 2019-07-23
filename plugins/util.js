@@ -5,9 +5,6 @@ export default ({ app }, inject) => {
   inject('keywordSearch', (obj, term) => {
     return obj.keywords.toLowerCase().includes(term.toLowerCase())
   })
-  inject('tagFilter', (items, tag) => {
-    return items.filter(obj => obj.tag === tag)
-  })
   inject('tagsFilter', (items, tag) => {
     return items.filter(obj => obj.tags.includes(tag))
   })

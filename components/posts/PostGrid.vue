@@ -1,10 +1,15 @@
 <template>
   <Content>
     <SearchBar :tags="tags" :selected="tag" @tag="tagFilter">
-      <input v-model="search" type="text" placeholder="Search..." class="search" />
+      <input
+        v-model="search"
+        type="text"
+        placeholder="Search..."
+        class="search"
+      />
     </SearchBar>
     <div class="grid col-1-1">
-      <Card
+      <PostItem
         v-for="item in queryItems"
         :key="item.id"
         :item="item"
@@ -25,14 +30,14 @@
 <script>
 import Content from '~/components/partials/Content'
 import SearchBar from '~/components/partials/SearchBar'
-import Card from '~/components/partials/Card'
+import PostItem from '~/components/posts/PostItem'
 import Pagination from '~/components/partials/Pagination'
 
 export default {
   components: {
     Content,
     SearchBar,
-    Card,
+    PostItem,
     Pagination
   },
   props: {
@@ -63,11 +68,7 @@ export default {
     queryItems: function() {
       let items = this.items
       if (this.tag !== '') {
-        if (this.type === 'post') {
-          items = this.$tagFilter(items, this.tag)
-        } else if (this.type === 'tool') {
-          items = this.$tagsFilter(items, this.tag)
-        }
+        items = this.$tagsFilter(items, this.tag)
       }
       items = items.filter(obj => {
         return this.$keywordSearch(obj, this.search)
@@ -111,5 +112,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input.search {}
+input.search {
+  width: 100%;
+  border: 1px solid $grey;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  text-indent: 10px;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  border-radius: 2px;
+}
 </style>

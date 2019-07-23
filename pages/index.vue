@@ -3,7 +3,7 @@
     <Header />
     <Content>
       <div class="grid">
-        <Card
+        <PostItem
           v-for="item in posts"
           :key="item.id"
           :item="item"
@@ -11,7 +11,7 @@
         />
       </div>
       <div class="grid">
-        <Card
+        <ToolItem
           v-for="item in tools"
           :key="item.id"
           :item="item"
@@ -25,12 +25,15 @@
 <script>
 import Header from '~/components/partials/Header'
 import Content from '~/components/partials/Content'
-import Card from '~/components/partials/Card'
+import PostItem from '~/components/posts/PostItem'
+import ToolItem from '~/components/tools/ToolItem'
 
 export default {
   components: {
     Header,
-    Content
+    Content,
+    PostItem,
+    ToolItem
   },
   asyncData({ store }) {
     return {

@@ -17,6 +17,7 @@ export default {
   env: {
     apiUrl: process.env.API_URL,
     configUrl: process.env.CONFIG_ENDPOINT,
+    languagesUrl: process.env.LANG_ENDPOINT,
     postsUrl: process.env.POSTS_ENDPOINT,
     toolsUrl: process.env.TOOLS_ENDPOINT,
     articleUrl: process.env.ARTICLE_ENDPOINT
@@ -27,7 +28,11 @@ export default {
   css: [ '~/assets/app.css' ],
 
   styleResources: {
-    scss: './assets/*.scss'
+    scss: [
+      './assets/_vars.scss',
+      './assets/columns.scss',
+      './assets/mixins.scss'
+    ]
   },
 
   plugins: [
@@ -50,7 +55,10 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
         })
       }
     }

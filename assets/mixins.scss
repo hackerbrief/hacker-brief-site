@@ -1,15 +1,20 @@
-@mixin flex($1, $2, $3, $4) {
+@mixin flex($direction, $wrap, $justify, $align) {
   display: flex;
-  flex-direction: $1;
-  flex-wrap: $2;
-  justify-content: $3;
-  align-items: $4
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align
 }
-
-@mixin position($1, $2, $3, $4, $5) {
-  position: $1;
-  top: $2;
-  right: $3;
-  bottom: $4;
-  left: $5;
+@mixin position($pos, $top, $rgt, $btm, $lft) {
+  position: $pos;
+  top: $top;
+  right: $rgt;
+  bottom: $btm;
+  left: $lft;
+}
+@mixin card() {
+  @include flex(row, wrap, flex-start, flex-start);
+  background-color: $primary;
+  border-radius: $radius;
+  box-shadow: 0 2px 8px $shadow;
 }

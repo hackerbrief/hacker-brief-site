@@ -2,6 +2,9 @@ export default ({ $axios }, inject) => {
   inject('fetchConfig', () => {
     return $axios.$get(process.env.apiUrl + process.env.configUrl)
   })
+  inject('fetchLanguages', () => {
+    return $axios.$get(process.env.apiUrl + process.env.languagesUrl)
+  })
   inject('fetchPosts', () => {
     return $axios.$get(process.env.apiUrl + process.env.postsUrl)
   })
@@ -9,6 +12,8 @@ export default ({ $axios }, inject) => {
     return $axios.$get(process.env.apiUrl + process.env.toolsUrl)
   })
   inject('fetchArticle', id => {
-    return $axios.$get(process.env.apiUrl + process.env.articleUrl + `${id}.json`)
+    return $axios.$get(
+      process.env.apiUrl + process.env.articleUrl + `${id}.json`
+    )
   })
 }

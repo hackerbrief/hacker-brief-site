@@ -62,12 +62,12 @@ export default ({ store }, inject) => {
         { name: 'og:description', content: post.description },
         { name: 'og:type', content: 'website' },
         { name: 'og:url', content: `${store.getters.blogUrl}/${post.slug}` },
-        { name: 'og:image', content: post.image },
+        { name: 'og:image', content: post.images.sq },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: store.getters.username },
         { name: 'twitter:title', content: `${post.title} | Hacker Brief` },
         { name: 'twitter:description', content: post.description },
-        { name: 'twitter:image', content: post.image },
+        { name: 'twitter:image', content: post.images.sq },
         { name: 'twitter:image:alt', content: 'Hacker Brief Logo' }
       ]
     }

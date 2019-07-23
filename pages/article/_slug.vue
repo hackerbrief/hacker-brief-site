@@ -1,11 +1,11 @@
 <template>
   <section id="article" class="light">
-    <Header :title="post.title" />
+    <Header :title="post.title" :description="post.description" />
     <Content>
-      <div class="image">
-        <img :src="article.image" :alt="post.title" />
-      </div>
-      <Article :body="article.body" />
+      <img :src="post.images.lg" :alt="post.title" class="post-image" />
+      <transition name="fade" appear>
+        <article v-html="article.body"></article>
+      </transition>
     </Content>
   </section>
 </template>
@@ -13,13 +13,11 @@
 <script>
 import Header from '~/components/partials/Header'
 import Content from '~/components/partials/Content'
-import Article from '~/components/partials/Article'
 
 export default {
   components: {
     Header,
-    Content,
-    Article
+    Content
   },
   async asyncData({ app, store, params }) {
     const post = await store.getters.postBySlug(params.slug)
@@ -30,7 +28,7 @@ export default {
     }
   },
   head() {
-    this.postSeo(article)
+    this.postSeo(this.post)
   },
   validate({ store, params, error }) {
     if (store.getters.postBySlug(params.slug)) return true
@@ -42,5 +40,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image {}
+img.post-image {
+}
+article {
+}
+article h1 {
+}
 </style>
