@@ -49,7 +49,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
     ['@nuxtjs/google-analytics', {
-      id: process.env.gaId,
+      id: `${process.env.gaId}`,
       dev: false
     }]
   ],
