@@ -15,6 +15,7 @@ export default {
   },
 
   env: {
+    gaId: process.env.ANALYTICS_ID,
     apiUrl: process.env.API_URL,
     configUrl: process.env.CONFIG_ENDPOINT,
     languagesUrl: process.env.LANG_ENDPOINT,
@@ -46,7 +47,11 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    ['@nuxtjs/google-analytics', {
+      id: process.env.gaId,
+      dev: false
+    }]
   ],
 
   build: {
