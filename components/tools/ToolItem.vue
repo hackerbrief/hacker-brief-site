@@ -8,7 +8,10 @@
         <p class="description" v-text="item.description"></p>
         <div class="bottom col-1-1">
           <no-ssr>
-            <a :href="item.url" target="_blank"> GITHUB <v-icon name="" /> </a>
+            <a :href="item.url" target="_blank">
+              OPEN
+              <v-icon name="external-link-alt" />
+            </a>
           </no-ssr>
         </div>
       </div>

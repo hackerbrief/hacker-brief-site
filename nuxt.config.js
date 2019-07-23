@@ -38,7 +38,8 @@ export default {
   plugins: [
     '~/plugins/api.js',
     '~/plugins/seo.js',
-    '~/plugins/util.js'
+    '~/plugins/util.js',
+    { src: '~/plugins/vue-awesome.js', ssr: false }
   ],
 
   modules: [
