@@ -6,6 +6,7 @@
       <n-link to="/blog">BLOG</n-link>
       <n-link to="/directory">DIRECTORY</n-link>
     </div>
+    <Socials />
     <div class="copyright">
       <no-ssr>
         <v-icon name="regular/copyright" />
@@ -16,7 +17,13 @@
 </template>
 
 <script>
-export default {}
+import Socials from '~/components/partials/Socials'
+
+export default {
+  components: {
+    Socials
+  }
+}
 </script>
 
 <style lang="scss" scoped>

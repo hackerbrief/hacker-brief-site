@@ -13,23 +13,7 @@
       <n-link to="/directory" class="nav-link">DIRECTORY</n-link>
     </div>
     <div class="socials hide-at-sm">
-      <no-ssr>
-        <a :href="$store.getters.github" target="_blank"
-          ><v-icon name="brands/github-square"
-        /></a>
-        <a :href="$store.getters.facebook" target="_blank"
-          ><v-icon name="brands/facebook-square"
-        /></a>
-        <a :href="$store.getters.twitter" target="_blank"
-          ><v-icon name="brands/twitter-square"
-        /></a>
-        <a :href="$store.getters.instagram" target="_blank"
-          ><v-icon name="brands/instagram"
-        /></a>
-        <a :href="$store.getters.youtube" target="_blank"
-          ><v-icon name="brands/youtube-square"
-        /></a>
-      </no-ssr>
+      <Socials />
     </div>
     <div
       :class="[{ active: open }, 'sidenav-icon', 'show-at-sm']"
@@ -43,7 +27,12 @@
 </template>
 
 <script>
+import Socials from '~/components/partials/Socials'
+
 export default {
+  components: {
+    Socials
+  },
   props: {
     open: {
       type: Boolean,
@@ -83,19 +72,6 @@ export default {
 }
 .socials {
   @include flex(row, nowrap, flex-end, center);
-  a {
-    text-decoration: none;
-    padding: 0 10px;
-    color: $white;
-    transition: $speed;
-  }
-  a:hover {
-    color: $accent;
-  }
-  a svg {
-    width: 20px;
-    height: 20px;
-  }
 }
 .sidenav-icon {
   display: inline-block;
