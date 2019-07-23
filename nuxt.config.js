@@ -22,7 +22,7 @@ export default {
     articleUrl: process.env.ARTICLE_ENDPOINT
   },
 
-  loading: { color: '#fff' },
+  loading: { color: '#22f025' },
 
   css: [ '~/assets/app.css' ],
 

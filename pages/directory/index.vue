@@ -1,10 +1,20 @@
 <template>
   <section id="directory">
+    <Header />
+    <Grid />
   </section>
 </template>
 
 <script>
-export default {}
+import Header from '~/components/partials/Header'
+import Grid from '~/components/partials/Grid'
+
+export default {
+  components: {
+    Header,
+    Grid
+  }
+}
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

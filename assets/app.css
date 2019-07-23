@@ -28,6 +28,9 @@ html, body {
 section {
   min-height: 100vh;
 }
+section.light {
+  background-color: #eeeeee;
+}
 
 /* Transitions */
 .page-leave-active {

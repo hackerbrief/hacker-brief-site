@@ -8,6 +8,9 @@ $lg: 1280px;
   max-width: $md;
   margin: 0 auto;
 }
+.container {
+  padding: 15px;
+}
 
 // col
 .col-1-1, .col-12-12 { width: 100%; }
