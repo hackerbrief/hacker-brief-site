@@ -4,6 +4,12 @@
 
 > Hacker Brief - Developer Blog and Resource Directory
 
+### FOLLOW
+* [Facebook](https://facebook.com/hackerbrief)
+* [Instagram](https://instagram.com/hackerbrief)
+* [Twitter](https://instagram.com/hackerbrief)
+* [Youtube](https://www.youtube.com/channel/UC-pFJMxOUmYLCal6gQx_uXw)
+
 ## Build Setup
 ``` bash
 # Install Dependencies
