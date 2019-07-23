@@ -35,16 +35,27 @@ export default {
   @include card();
 }
 h1.title {
+  font-size: 1.1rem;
+  color: $white;
 }
 span.tags {
 }
 .divider {
+  width: 100%;
+  height: 2px;
+  color: $accent;
+  margin: 10px auto;
 }
 p.description {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: $eggshell;
 }
 .bottom {
+  @include flex(row, nowrap, flex-end, center);
 }
 .bottom a {
+  @include flex(row, nowrap, center, center);
   svg {
   }
   &:hover {
