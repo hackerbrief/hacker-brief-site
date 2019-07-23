@@ -27,7 +27,7 @@ export default {
 
   loading: { color: '#22f025' },
 
-  css: [ '~/assets/app.css' ],
+  css: [ '~/assets/_app.css' ],
 
   styleResources: {
     scss: './assets/*.scss'
@@ -53,6 +53,17 @@ export default {
       dev: false
     }]
   ],
+
+  generate: {
+    routes: function() {
+      return axios.get(process.env.apiUrl + process.env.postsUrl)
+        .then((res) => {
+          return res.data.map((post) => {
+            return '/article/' + post.slug
+          })
+        })
+    }
+  },
 
   build: {
     plugins: [
