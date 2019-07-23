@@ -24,7 +24,11 @@ export default {
 
   loading: { color: '#fff' },
 
-  css: [],
+  css: [ '~/assets/app.css' ],
+
+  styleResources: {
+    scss: './assets/*.scss'
+  },
 
   plugins: [
     '~/plugins/api.js',
@@ -34,7 +38,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources'
   ],
 
   build: {
