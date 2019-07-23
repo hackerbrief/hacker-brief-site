@@ -1,5 +1,5 @@
 <template>
-  <div class="pagination">
+  <div class="pagination col-1-1">
   </div>
 </template>
 

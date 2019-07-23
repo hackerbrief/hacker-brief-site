@@ -1,7 +1,7 @@
 <template>
   <section id="blog">
-    <Header />
-    <Grid />
+    <Header title="BLOG" />
+    <Grid :items="posts" :tags="tags" type="post" />
   </section>
 </template>
 
@@ -13,8 +13,15 @@ export default {
   components: {
     Header,
     Grid
+  },
+  asyncData({ store }) {
+    return {
+      posts: store.getters.allPosts,
+      tags: store.getters.blogTags
+    }
+  }
+  head() {
+    this.blogSeo()
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

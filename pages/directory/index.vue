@@ -1,7 +1,7 @@
 <template>
   <section id="directory">
-    <Header />
-    <Grid />
+    <Header title="DIRECTORY" />
+    <Grid :items="tools" :tags="tags" type="tool" />
   </section>
 </template>
 
@@ -13,8 +13,15 @@ export default {
   components: {
     Header,
     Grid
+  },
+  asyncData({ store }) {
+    return {
+      tools: store.getters.allTools,
+      tags: store.getters.directoryTags
+    }
+  }
+  head() {
+    this.directorySeo()
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

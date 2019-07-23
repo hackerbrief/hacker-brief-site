@@ -1,10 +1,9 @@
 <template>
-  <div class="tool-item item">
+  <div class="card">
   </div>
 </template>
 
 <script>
-export default {}
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav col-1-1">
   </div>
 </template>
 
