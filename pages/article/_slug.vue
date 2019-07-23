@@ -44,6 +44,20 @@ img.post-image {
 }
 article {
 }
+article img {
+}
 article h1 {
+}
+article h2 {
+}
+article h3 {
+}
+article p {
+}
+article p a {
+}
+article ul {
+}
+article ul li {
 }
 </style>
