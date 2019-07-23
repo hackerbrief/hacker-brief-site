@@ -13,7 +13,6 @@
         v-for="item in queryItems"
         :key="item.id"
         :item="item"
-        :type="type"
       />
     </div>
     <Pagination
@@ -47,10 +46,6 @@ export default {
     },
     tags: {
       type: Array,
-      required: true
-    },
-    type: {
-      type: String,
       required: true
     }
   },
@@ -110,17 +105,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-input.search {
-  width: 100%;
-  border: 1px solid $grey;
-  margin: 0;
-  padding: 0;
-  height: 30px;
-  text-indent: 10px;
-  font-size: 1rem;
-  line-height: 1.2rem;
-  border-radius: 2px;
-}
-</style>

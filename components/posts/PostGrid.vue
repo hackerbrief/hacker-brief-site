@@ -13,7 +13,6 @@
         v-for="item in queryItems"
         :key="item.id"
         :item="item"
-        :type="type"
       />
     </div>
     <Pagination
@@ -47,10 +46,6 @@ export default {
     },
     tags: {
       type: Array,
-      required: true
-    },
-    type: {
-      type: String,
       required: true
     }
   },
