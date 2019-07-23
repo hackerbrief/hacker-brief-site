@@ -1,5 +1,5 @@
 <template>
-  <section id="blog">
+  <section>
     <Header title="BLOG" description="HACKER BRIEF BLOG" />
     <PostGrid :items="posts" :tags="tags" type="post" />
   </section>

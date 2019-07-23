@@ -1,23 +1,18 @@
 <template>
-  <section id="article" class="light">
+  <section class="light">
     <Header :title="post.title" :description="post.description" />
-    <Content>
-      <img :src="post.images.lg" :alt="post.title" class="post-image" />
-      <transition name="fade" appear>
-        <article v-html="article.body"></article>
-      </transition>
-    </Content>
+    <PostArticle :post="post" :article="article" />
   </section>
 </template>
 
 <script>
 import Header from '~/components/partials/Header'
-import Content from '~/components/partials/Content'
+import PostArticle from '~/components/posts/PostArticle'
 
 export default {
   components: {
     Header,
-    Content
+    PostArticle
   },
   async asyncData({ app, store, params }) {
     const post = await store.getters.postBySlug(params.slug)
@@ -39,25 +34,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-img.post-image {
-}
-article {
-}
-article img {
-}
-article h1 {
-}
-article h2 {
-}
-article h3 {
-}
-article p {
-}
-article p a {
-}
-article ul {
-}
-article ul li {
-}
-</style>
+<style lang="scss" scoped></style>

@@ -1,6 +1,7 @@
 require('dotenv').config()
 import pkg from './package'
 import webpack from 'webpack'
+import axios from 'axios'
 
 export default {
   mode: 'universal',
@@ -19,7 +20,6 @@ export default {
     gaId: process.env.ANALYTICS_ID,
     apiUrl: process.env.API_URL,
     configUrl: process.env.CONFIG_ENDPOINT,
-    languagesUrl: process.env.LANG_ENDPOINT,
     postsUrl: process.env.POSTS_ENDPOINT,
     toolsUrl: process.env.TOOLS_ENDPOINT,
     articleUrl: process.env.ARTICLE_ENDPOINT
@@ -56,10 +56,10 @@ export default {
 
   generate: {
     routes: function() {
-      return axios.get(process.env.apiUrl + process.env.postsUrl)
+      return axios.get(`${process.env.apiUrl}/${process.env.postsUrl}`)
         .then((res) => {
           return res.data.map((post) => {
-            return '/article/' + post.slug
+            return `/article/${post.slug}`
           })
         })
     }

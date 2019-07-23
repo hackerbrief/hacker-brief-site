@@ -1,5 +1,5 @@
 <template>
-  <section id="directory">
+  <section>
     <Header title="DIRECTORY" description="DEVELOPER TOOLS & RESOURCES" />
     <ToolGrid :items="tools" :tags="tags" type="tool" />
   </section>
