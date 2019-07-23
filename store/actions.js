@@ -24,7 +24,8 @@ export default {
   },
   getTools: async function({ commit, error }) {
     await this.$fetchTools().then(res => {
-      commit('SET_TOOLS', res)
+      const data = _.sort(res, ['title'])
+      commit('SET_TOOLS', data)
     })
   }
 }
