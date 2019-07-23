@@ -15,29 +15,29 @@ export default {
   keywords: state => {
     return state.info.keywords
   },
-  username: state => {
-    return state.info.username
-  },
 
   // Socials
+  username: state => {
+    return state.socials.username
+  },
   facebook: state => {
-    return state.info.facebook
+    return state.socials.facebook
   },
   twitter: state => {
-    return state.info.twitter
+    return state.socials.twitter
   },
   instagram: state => {
-    return state.info.instagram
+    return state.socials.instagram
   },
   youtube: state => {
-    return state.info.youtube
+    return state.socials.youtube
   },
   github: state => {
-    return state.info.github
+    return state.socials.github
   },
 
   // Languages
-  allLanguages: state => {
+  languages: state => {
     return state.languages
   },
 
@@ -76,7 +76,7 @@ export default {
   },
 
   // Posts
-  allPosts: state => {
+  posts: state => {
     return state.posts
   },
   indexPosts: state => {
@@ -87,7 +87,7 @@ export default {
   },
 
   // Tools
-  allTools: state => {
+  tools: state => {
     return state.tools
   },
   indexTools: state => {

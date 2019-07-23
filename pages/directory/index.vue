@@ -16,7 +16,7 @@ export default {
   },
   asyncData({ store }) {
     return {
-      tools: store.getters.allTools,
+      tools: store.getters.tools,
       tags: store.getters.directoryTags
     }
   },

@@ -2,6 +2,9 @@ export default {
   SET_INFO: (state, payload) => {
     state.info = payload
   },
+  SET_SOCIALS: () => {
+    state.socials = payload
+  },
   SET_LANGUAGES: (state, payload) => {
     state.languages = payload
   },

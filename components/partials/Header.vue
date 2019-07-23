@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   background-color: $accent;
-  background-image: url('/graph-bg.png');
+  background-image: url('/images/graph-bg.png');
   min-height: 170px;
   border-bottom: 1px solid $light;
   transition: $speed;

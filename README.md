@@ -1,5 +1,7 @@
 # HACKER BRIEF :: Website
 
+[Hacker Brief - LIVE](https://hackerbrief.com)
+
 > Hacker Brief - Developer Blog and Resource Directory
 
 ## Build Setup

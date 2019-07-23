@@ -3,20 +3,10 @@
     <Header />
     <Content>
       <div class="grid">
-        <PostItem
-          v-for="item in posts"
-          :key="item.id"
-          :item="item"
-          type="post"
-        />
+        <PostItem v-for="item in posts" :key="item.id" :item="item" />
       </div>
       <div class="grid">
-        <ToolItem
-          v-for="item in tools"
-          :key="item.id"
-          :item="item"
-          type="tool"
-        />
+        <ToolItem v-for="item in tools" :key="item.id" :item="item" />
       </div>
     </Content>
   </section>

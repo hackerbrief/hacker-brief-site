@@ -3,7 +3,7 @@
     <div class="links">
       <n-link to="/">
         <img
-          src="/hb-logo-green.svg"
+          src="/images/hb-logo-green.svg"
           alt="Hacker Brief Logo"
           class="show-at-sm"
         />
@@ -13,21 +13,23 @@
       <n-link to="/directory" class="nav-link">DIRECTORY</n-link>
     </div>
     <div class="socials hide-at-sm">
-      <a :href="$store.getters.github" target="_blank"
-        ><v-icon name="brands/github-square"
-      /></a>
-      <a :href="$store.getters.facebook" target="_blank"
-        ><v-icon name="brands/facebook-square"
-      /></a>
-      <a :href="$store.getters.twitter" target="_blank"
-        ><v-icon name="brands/twitter-square"
-      /></a>
-      <a :href="$store.getters.instagram" target="_blank"
-        ><v-icon name="brands/instagram"
-      /></a>
-      <a :href="$store.getters.youtube" target="_blank"
-        ><v-icon name="brands/youtube-square"
-      /></a>
+      <no-ssr>
+        <a :href="$store.getters.github" target="_blank"
+          ><v-icon name="brands/github-square"
+        /></a>
+        <a :href="$store.getters.facebook" target="_blank"
+          ><v-icon name="brands/facebook-square"
+        /></a>
+        <a :href="$store.getters.twitter" target="_blank"
+          ><v-icon name="brands/twitter-square"
+        /></a>
+        <a :href="$store.getters.instagram" target="_blank"
+          ><v-icon name="brands/instagram"
+        /></a>
+        <a :href="$store.getters.youtube" target="_blank"
+          ><v-icon name="brands/youtube-square"
+        /></a>
+      </no-ssr>
     </div>
     <div
       :class="[{ active: open }, 'sidenav-icon', 'show-at-sm']"

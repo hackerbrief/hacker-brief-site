@@ -1,8 +1,9 @@
 export default () => ({
   info: {},
-  languages: [],
+  socials: {},
   blog: {},
   directory: {},
+  languages: [],
   posts: [],
   tools: []
 })

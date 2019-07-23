@@ -1,6 +1,6 @@
 <template>
   <div id="footer col-1-1">
-    <img src="/hb-logo-white.svg" alt="Hacker Brief Logo" />
+    <img src="/images/hb-logo-white.svg" alt="Hacker Brief Logo" />
     <div class="links">
       <n-link to="/">HOME</n-link>
       <n-link to="/blog">BLOG</n-link>
@@ -23,7 +23,7 @@ export default {}
 #footer {
   @include flex(column, nowrap, center, center);
   background-color: $accent;
-  background-image: url('/graph-bg.png');
+  background-image: url('/images/graph-bg.png');
   border-top: 1px solid $light;
 }
 #footer img {

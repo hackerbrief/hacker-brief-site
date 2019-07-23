@@ -1,5 +1,6 @@
 require('dotenv').config()
 import pkg from './package'
+import webpack from 'webpack'
 
 export default {
   mode: 'universal',
@@ -29,18 +30,17 @@ export default {
   css: [ '~/assets/app.css' ],
 
   styleResources: {
-    scss: [
-      './assets/_vars.scss',
-      './assets/columns.scss',
-      './assets/mixins.scss'
-    ]
+    scss: './assets/*.scss'
   },
 
   plugins: [
     '~/plugins/api.js',
     '~/plugins/seo.js',
     '~/plugins/util.js',
-    { src: '~/plugins/vue-awesome.js', ssr: false }
+    {
+      src: '~/plugins/icons.js',
+      ssr: false
+    }
   ],
 
   modules: [

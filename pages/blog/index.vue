@@ -16,7 +16,7 @@ export default {
   },
   asyncData({ store }) {
     return {
-      posts: store.getters.allPosts,
+      posts: store.getters.posts,
       tags: store.getters.blogTags
     }
   },
